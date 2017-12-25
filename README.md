@@ -1,10 +1,12 @@
+
+# GT-511C3
+Fingerprint Scanner Sensor module TTL GT-511C3 Arduino code without using library. Compatible with most of all arduino boards. 
+
+
 # Reference Repositories
 https://github.com/sparkfun/Fingerprint_Scanner-TTL
 
 https://github.com/marc-pelland/fingerprint_gt511c3
-
-# GT-511C3
-Fingerprint Scanner Sensor module TTL GT-511C3 Arduino code. Compatible with all arduino boards. 
 
 # Connection
 For a reliable connection if you are using a 5V Arduino microcontroller:
