@@ -140,6 +140,8 @@ void loop(){
             while(Serial.available() == 0){}
             para_ip = Serial.readString();
             para = para_ip.toInt();
+            Serial.println(">> Press finger");
+            while(isFingerPressed() != 0);
             captureFinger(1);
             if(verify(para) == 0){
                 Serial.print("Same finger found in the ID : ");
@@ -153,8 +155,11 @@ void loop(){
           
           else if(input == "9"){
             LED(1);
+            Serial.println(">> Press finger");
+            while(isFingerPressed() != 0);
             captureFinger(1);
             int identify_id = identify();
+            
             if(identify_id < 200){
                 Serial.print("Finger found in the ID : ");
                 Serial.println(identify_id);
@@ -475,7 +480,7 @@ void waitForReply(){
   } else {
     checksumCorrect = false;
   }
-} 
+}
 
 //turns the word you put into it (the paramter in the code above) to two bytes
 void valueToWORD(int v){ 
